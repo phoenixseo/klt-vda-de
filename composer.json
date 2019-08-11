@@ -1,5 +1,5 @@
 {
-    "name": "drupal-composer/drupal-project",
+    "name": "phoenixseo/klt-vda-de",
     "description": "Project template for Drupal 8 projects with composer",
     "type": "project",
     "license": "GPL-2.0-or-later",
@@ -49,7 +49,9 @@
         "drupal/schema_metatag": "^1",
         "drupal/redirect": "^1",
         "drupal/amp": "^3",
-        "drupal/amptheme": "^3"
+        "drupal/amptheme": "^3",
+        "drupal/yoast_seo": "^1",
+        "drupal/address": "^1"
     },
     "require-dev": {
         "webflo/drupal-core-require-dev": "^8.7.0"
@@ -66,7 +68,9 @@
         "classmap": [
             "scripts/composer/ScriptHandler.php"
         ],
-        "files": ["load.environment.php"]
+        "files": [
+            "load.environment.php"
+        ]
     },
     "scripts": {
         "pre-install-cmd": [
@@ -88,12 +92,24 @@
             "drupal/core": "-p2"
         },
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/{$name}": ["type:drupal-drush"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "drupal-scaffold": {
             "initial": {
